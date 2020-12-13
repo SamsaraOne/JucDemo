@@ -10,7 +10,7 @@ public class CyclicBarrieDemo {
         CyclicBarrier cyclicBarrier = new CyclicBarrier(4, ()->{
             System.out.println("finally task");
         });
-//同样是完成特定的任务之后才能执行finally task 但是barrier阻塞的是自己
+//同样是完成特定的数量任务之后才能执行finally task 但是barrier阻塞的是自己
         for (int i=0;i<4;i++){
             final int temp = i;
             new Thread(()->{
